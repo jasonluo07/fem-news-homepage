@@ -4,6 +4,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <Image
+        className="hero__image"
         src="/image-web-3-mobile.jpg"
         alt="The Bright Future of Web 3.0?"
         width={343}
@@ -16,7 +17,7 @@ export default function Hero() {
         fulfilling its promise?
       </p>
       <a className="hero__button" href="#">
-        Read More
+        READ MORE
       </a>
     </section>
   );

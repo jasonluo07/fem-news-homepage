@@ -9,3 +9,23 @@
 .header__nav {
   @apply hidden;
 }
+
+.hero {
+  @apply mb-16;
+}
+
+.hero__image {
+  @apply mb-6;
+}
+
+.hero__title {
+  @apply mb-4 text-[40px] font-extrabold leading-none;
+}
+
+.hero__description {
+  @apply mb-6 text-[15px] leading-[26px] text-[#5E607A];
+}
+
+.hero__button {
+  @apply flex h-[48px] w-[185px] items-center justify-center bg-[#F15D51] text-[14px] font-bold leading-6 tracking-[4.38px];
+}
