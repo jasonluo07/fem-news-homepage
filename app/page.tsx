@@ -4,36 +4,36 @@ export default function Home() {
   return (
     <>
       <header className="header">
-        <a href="#" className="header__logo">
+        <a className="header__logo" href="#">
           <Image src="/logo.svg" alt="Logo" width={45} height={28} />
         </a>
         <button className="header__menu-toggle">
-          <Image src="/icon-menu.svg" alt="Menu" width={40} height={17} />
+          <Image className="header__menu-icon" src="/icon-menu.svg" alt="Menu" width={40} height={17} />
         </button>
-        <nav className="header__navigation">
+        <nav className="header__nav">
           <ul className="header__nav-list">
             <li className="header__nav-item">
-              <a href="#" className="header__nav-link">
+              <a className="header__nav-link" href="#">
                 Home
               </a>
             </li>
             <li className="header__nav-item">
-              <a href="#" className="header__nav-link">
+              <a className="header__nav-link" href="#">
                 New
               </a>
             </li>
             <li className="header__nav-item">
-              <a href="#" className="header__nav-link">
+              <a className="header__nav-link" href="#">
                 Popular
               </a>
             </li>
             <li className="header__nav-item">
-              <a href="#" className="header__nav-link">
+              <a className="header__nav-link" href="#">
                 Trending
               </a>
             </li>
             <li className="header__nav-item">
-              <a href="#" className="header__nav-link">
+              <a className="header__nav-link" href="#">
                 Categories
               </a>
             </li>
@@ -48,7 +48,7 @@ export default function Home() {
             We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
             of the people. But is it really fulfilling its promise?
           </p>
-          <a href="#" className="hero-button">
+          <a className="hero__button" href="#">
             Read More
           </a>
         </section>
@@ -57,13 +57,17 @@ export default function Home() {
           <ul className="latest-news__list">
             <li className="latest-news__item">
               <h3 className="latest-news__item-title">
-                <a href="#">Hydrogen VS Electric Cars</a>
+                <a className="latest-news__item-link" href="#">
+                  Hydrogen VS Electric Cars
+                </a>
               </h3>
               <p className="latest-news__item-description">Will hydrogen-fueled cars ever catch up to EVs?</p>
             </li>
             <li className="latest-news__item">
               <h3 className="latest-news__item-title">
-                <a href="#">The Downsides of AI Artistry</a>
+                <a className="latest-news__item-link" href="#">
+                  The Downsides of AI Artistry
+                </a>
               </h3>
               <p className="latest-news__item-description">
                 What are the possible adverse effects of on-demand AI image generation?
@@ -71,7 +75,9 @@ export default function Home() {
             </li>
             <li className="latest-news__item">
               <h3 className="latest-news__item-title">
-                <a href="#">Is VC Funding Drying Up?</a>
+                <a className="latest-news__item-link" href="#">
+                  Is VC Funding Drying Up?
+                </a>
               </h3>
               <p className="latest-news__item-description">
                 Private funding by VC firms is down 50% YOY. We take a look at what that means.
@@ -83,41 +89,43 @@ export default function Home() {
           <ul className="featured-articles__list">
             <li className="featured-articles__item">
               <Image
-                className="featured-articles__image"
+                className="featured-articles__item-image"
                 src="/image-retro-pcs.jpg"
                 alt="Reviving Retro PCs"
                 width={100}
                 height={127}
               />
-              <div className="featured-articles__content">
-                <h3 className="featured-articles__title">Reviving Retro PCs</h3>
-                <p className="featured-articles__description">What happens when old PCs are given modern upgrades?</p>
+              <div className="featured-articles__item-content">
+                <h3 className="featured-articles__item-title">Reviving Retro PCs</h3>
+                <p className="featured-articles__item-description">
+                  What happens when old PCs are given modern upgrades?
+                </p>
               </div>
             </li>
             <li className="featured-articles__item">
               <Image
-                className="featured-articles__image"
+                className="featured-articles__item-image"
                 src="/image-top-laptops.jpg"
                 alt="Top 10 Laptops of 2022"
                 width={100}
                 height={127}
               />
-              <div className="featured-articles__content">
-                <h3 className="featured-articles__title">Top 10 Laptops of 2022</h3>
-                <p className="featured-articles__description">Our best picks for various needs and budgets.</p>
+              <div className="featured-articles__item-content">
+                <h3 className="featured-articles__item-title">Top 10 Laptops of 2022</h3>
+                <p className="featured-articles__item-description">Our best picks for various needs and budgets.</p>
               </div>
             </li>
             <li className="featured-articles__item">
               <Image
-                className="featured-articles__image"
+                className="featured-articles__item-image"
                 src="/image-gaming-growth.jpg"
                 alt="The Growth of Gaming"
                 width={100}
                 height={127}
               />
-              <div className="featured-articles__content">
-                <h3 className="featured-articles__title">The Growth of Gaming</h3>
-                <p className="featured-articles__description">How the pandemic has sparked fresh opportunities.</p>
+              <div className="featured-articles__item-content">
+                <h3 className="featured-articles__item-title">The Growth of Gaming</h3>
+                <p className="featured-articles__item-description">How the pandemic has sparked fresh opportunities.</p>
               </div>
             </li>
           </ul>
