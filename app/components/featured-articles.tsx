@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function FeaturedArticles() {
   return (
     <section className="featured-articles">
-      <ul className="featured-articles__list">
+      <ol className="featured-articles__list">
         <li className="featured-articles__item">
           <Image
             className="featured-articles__item-image"
@@ -13,6 +13,7 @@ export default function FeaturedArticles() {
             height={127}
           />
           <div className="featured-articles__item-content">
+            <div className="articles-list__item-number">01</div>
             <h3 className="featured-articles__item-title">
               Reviving Retro PCs
             </h3>
@@ -30,6 +31,7 @@ export default function FeaturedArticles() {
             height={127}
           />
           <div className="featured-articles__item-content">
+            <div className="articles-list__item-number">01</div>
             <h3 className="featured-articles__item-title">
               Top 10 Laptops of 2022
             </h3>
@@ -47,6 +49,7 @@ export default function FeaturedArticles() {
             height={127}
           />
           <div className="featured-articles__item-content">
+            <div className="articles-list__item-number">01</div>
             <h3 className="featured-articles__item-title">
               The Growth of Gaming
             </h3>
@@ -55,7 +58,7 @@ export default function FeaturedArticles() {
             </p>
           </div>
         </li>
-      </ul>
+      </ol>
     </section>
   );
 }

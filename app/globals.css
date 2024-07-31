@@ -36,7 +36,7 @@
 /* LatestNews */
 
 .latest-news {
-  @apply bg-[#00001A] px-5 py-6;
+  @apply mb-16 bg-[#00001A] px-5 py-6;
 }
 
 .latest-news__item:not(:last-child) {
@@ -54,4 +54,25 @@
 
 .latest-news__item-description {
   @apply text-[15px] leading-[26px] text-[#C5C6CE];
+}
+
+/* FeaturedArticles */
+.featured-articles__item:not(:last-child) {
+  @apply mb-8;
+}
+
+.featured-articles__item {
+  @apply flex gap-x-6;
+}
+
+.articles-list__item-number {
+  @apply text-light-vermilion mb-3 text-[32px] font-bold leading-[32px];
+}
+
+.featured-articles__item-title {
+  @apply text-dark-space-blue mb-2 text-[18px] font-extrabold leading-[24px];
+}
+
+.featured-articles__item-description {
+  @apply text-gunmetal text-[15px] leading-[26px];
 }
