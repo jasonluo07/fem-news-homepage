@@ -5,13 +5,13 @@ import LatestNews from '@/app/components/latest-news';
 
 export default function Home() {
   return (
-    <>
+    <div className="mx-4 mb-8 mt-7">
       <Header />
       <main className="main">
         <Hero />
         <LatestNews />
         <FeaturedArticles />
       </main>
-    </>
+    </div>
   );
 }
