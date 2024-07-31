@@ -8,7 +8,13 @@ export default function Home() {
           <Image src="/logo.svg" alt="Logo" width={45} height={28} />
         </a>
         <button className="header__menu-toggle">
-          <Image className="header__menu-icon" src="/icon-menu.svg" alt="Menu" width={40} height={17} />
+          <Image
+            className="header__menu-icon"
+            src="/icon-menu.svg"
+            alt="Menu"
+            width={40}
+            height={17}
+          />
         </button>
         <nav className="header__nav">
           <ul className="header__nav-list">
@@ -42,11 +48,17 @@ export default function Home() {
       </header>
       <main className="main">
         <section className="hero">
-          <Image src="/image-web-3-mobile.jpg" alt="The Bright Future of Web 3.0?" width={343} height={300} />
+          <Image
+            src="/image-web-3-mobile.jpg"
+            alt="The Bright Future of Web 3.0?"
+            width={343}
+            height={300}
+          />
           <h1 className="hero__title">The Bright Future of Web 3.0?</h1>
           <p className="hero__description">
-            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
-            of the people. But is it really fulfilling its promise?
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
           </p>
           <a className="hero__button" href="#">
             Read More
@@ -61,7 +73,9 @@ export default function Home() {
                   Hydrogen VS Electric Cars
                 </a>
               </h3>
-              <p className="latest-news__item-description">Will hydrogen-fueled cars ever catch up to EVs?</p>
+              <p className="latest-news__item-description">
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
             </li>
             <li className="latest-news__item">
               <h3 className="latest-news__item-title">
@@ -70,7 +84,8 @@ export default function Home() {
                 </a>
               </h3>
               <p className="latest-news__item-description">
-                What are the possible adverse effects of on-demand AI image generation?
+                What are the possible adverse effects of on-demand AI image
+                generation?
               </p>
             </li>
             <li className="latest-news__item">
@@ -80,7 +95,8 @@ export default function Home() {
                 </a>
               </h3>
               <p className="latest-news__item-description">
-                Private funding by VC firms is down 50% YOY. We take a look at what that means.
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
               </p>
             </li>
           </ul>
@@ -96,7 +112,9 @@ export default function Home() {
                 height={127}
               />
               <div className="featured-articles__item-content">
-                <h3 className="featured-articles__item-title">Reviving Retro PCs</h3>
+                <h3 className="featured-articles__item-title">
+                  Reviving Retro PCs
+                </h3>
                 <p className="featured-articles__item-description">
                   What happens when old PCs are given modern upgrades?
                 </p>
@@ -111,8 +129,12 @@ export default function Home() {
                 height={127}
               />
               <div className="featured-articles__item-content">
-                <h3 className="featured-articles__item-title">Top 10 Laptops of 2022</h3>
-                <p className="featured-articles__item-description">Our best picks for various needs and budgets.</p>
+                <h3 className="featured-articles__item-title">
+                  Top 10 Laptops of 2022
+                </h3>
+                <p className="featured-articles__item-description">
+                  Our best picks for various needs and budgets.
+                </p>
               </div>
             </li>
             <li className="featured-articles__item">
@@ -124,8 +146,12 @@ export default function Home() {
                 height={127}
               />
               <div className="featured-articles__item-content">
-                <h3 className="featured-articles__item-title">The Growth of Gaming</h3>
-                <p className="featured-articles__item-description">How the pandemic has sparked fresh opportunities.</p>
+                <h3 className="featured-articles__item-title">
+                  The Growth of Gaming
+                </h3>
+                <p className="featured-articles__item-description">
+                  How the pandemic has sparked fresh opportunities.
+                </p>
               </div>
             </li>
           </ul>
