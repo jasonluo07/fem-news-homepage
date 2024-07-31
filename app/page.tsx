@@ -40,6 +40,17 @@ export default function Home() {
           </ul>
         </nav>
       </header>
+      <main className="main">
+        <section className="hero">
+
+        </section>
+        <section className="latest-news">
+
+        </section>
+        <section className="featured-articles">
+
+        </section>
+      </main>
     </>
   );
 }
