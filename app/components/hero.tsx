@@ -9,6 +9,10 @@ export default function Hero() {
         alt="The Bright Future of Web 3.0?"
         width={343}
         height={300}
+        style={{
+          width: '100%',
+          height: 'auto',
+        }}
       />
       <h1 className="hero__title">The Bright Future of Web 3.0?</h1>
       <p className="hero__description">
