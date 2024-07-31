@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Header */
 .header {
   @apply mb-8 flex justify-between;
 }
@@ -9,6 +10,8 @@
 .header__nav {
   @apply hidden;
 }
+
+/* Hero */
 
 .hero {
   @apply mb-16;
@@ -28,4 +31,27 @@
 
 .hero__button {
   @apply flex h-[48px] w-[185px] items-center justify-center bg-[#F15D51] text-[14px] font-bold leading-6 tracking-[4.38px];
+}
+
+/* LatestNews */
+
+.latest-news {
+  @apply bg-[#00001A] px-5 py-6;
+}
+
+.latest-news__item:not(:last-child) {
+  @apply mb-[30px] pb-[30px];
+  border-bottom: 1px solid #5e607a;
+}
+
+.latest-news__title {
+  @apply mb-9 text-[32px] font-bold leading-[32px] text-[#E9AA52];
+}
+
+.latest-news__item-title {
+  @apply mb-2 text-[20px] font-extrabold leading-[24px] text-[#FFFDFA];
+}
+
+.latest-news__item-description {
+  @apply text-[15px] leading-[26px] text-[#C5C6CE];
 }
