@@ -4,7 +4,20 @@ export default function Header() {
   return (
     <header className="header">
       <a className="header__logo" href="#">
-        <Image src="/logo.svg" alt="Logo" width={45} height={28} />
+        <Image
+          className="block md:hidden"
+          src="/logo.svg"
+          alt="Logo"
+          width={45}
+          height={28}
+        />
+        <Image
+          className="hidden md:block"
+          src="/logo.svg"
+          alt="Logo"
+          width={64}
+          height={40}
+        />
       </a>
       <button className="header__menu-toggle">
         <Image

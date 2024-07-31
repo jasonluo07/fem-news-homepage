@@ -4,15 +4,26 @@
 
 /* Header */
 .header {
-  @apply mb-8 flex justify-between;
+  @apply mb-8 flex justify-between md:mb-[55px];
+}
+
+.header__menu-toggle {
+  @apply block md:hidden;
 }
 
 .header__nav {
-  @apply hidden;
+  @apply hidden md:block;
+}
+
+.header__nav-list {
+  @apply md:flex md:gap-x-10;
+}
+
+.header__nav-item {
+  @apply text-[15px] leading-[26px] text-gunmetal;
 }
 
 /* Hero */
-
 .hero {
   @apply mb-16;
 }
@@ -66,13 +77,13 @@
 }
 
 .articles-list__item-number {
-  @apply text-light-vermilion mb-3 text-[32px] font-bold leading-[32px];
+  @apply mb-3 text-[32px] font-bold leading-[32px] text-light-vermilion;
 }
 
 .featured-articles__item-title {
-  @apply text-dark-space-blue mb-2 text-[18px] font-extrabold leading-[24px];
+  @apply mb-2 text-[18px] font-extrabold leading-[24px] text-dark-space-blue;
 }
 
 .featured-articles__item-description {
-  @apply text-gunmetal text-[15px] leading-[26px];
+  @apply text-[15px] leading-[26px] text-gunmetal;
 }
