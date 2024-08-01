@@ -22,14 +22,14 @@ function Header() {
       <Link className="header__logo" href="#">
         <Image
           className="block md:hidden"
-          src="/logo.svg"
+          src="/fem-news-homepage/logo.svg"
           alt="Logo"
           width={45}
           height={28}
         />
         <Image
           className="hidden md:block"
-          src="/logo.svg"
+          src="/fem-news-homepage/logo.svg"
           alt="Logo"
           width={64}
           height={40}
@@ -38,7 +38,7 @@ function Header() {
       <button className="header__menu-toggle">
         <Image
           className="header__menu-icon"
-          src="/icon-menu.svg"
+          src="/fem-news-homepage/icon-menu.svg"
           alt="Menu"
           width={40}
           height={17}
@@ -82,7 +82,7 @@ function Hero() {
     <section className="hero">
       <Image
         className="hero__image-mobile"
-        src="/image-web-3-mobile.jpg"
+        src="/fem-news-homepage/image-web-3-mobile.jpg"
         alt="The Bright Future of Web 3.0?"
         width={343}
         height={300}
@@ -93,7 +93,7 @@ function Hero() {
       />
       <Image
         className="hero__image-desktop"
-        src="/image-web-3-desktop.jpg"
+        src="/fem-news-homepage/image-web-3-desktop.jpg"
         alt="The Bright Future of Web 3.0?"
         width={730}
         height={300}
@@ -168,7 +168,7 @@ function FeaturedArticles() {
         <li className="featured-articles__item">
           <Image
             className="featured-articles__item-image"
-            src="/image-retro-pcs.jpg"
+            src="/fem-news-homepage/image-retro-pcs.jpg"
             alt="Reviving Retro PCs"
             width={100}
             height={127}
@@ -188,7 +188,7 @@ function FeaturedArticles() {
         <li className="featured-articles__item">
           <Image
             className="featured-articles__item-image"
-            src="/image-top-laptops.jpg"
+            src="/fem-news-homepage/image-top-laptops.jpg"
             alt="Top 10 Laptops of 2022"
             width={100}
             height={127}
@@ -208,7 +208,7 @@ function FeaturedArticles() {
         <li className="featured-articles__item">
           <Image
             className="featured-articles__item-image"
-            src="/image-gaming-growth.jpg"
+            src="/fem-news-homepage/image-gaming-growth.jpg"
             alt="The Growth of Gaming"
             width={100}
             height={127}
