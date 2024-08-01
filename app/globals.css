@@ -25,7 +25,7 @@
 
 /* Hero */
 .hero {
-  @apply mb-16 md:max-w-[730px];
+  @apply mb-16 md:mb-0 md:max-w-[730px];
 }
 
 .hero__image-mobile {
@@ -59,7 +59,7 @@
 /* LatestNews */
 
 .latest-news {
-  @apply mb-16 bg-[#00001A] px-5 py-6 md:max-w-[350px];
+  @apply mb-16 bg-[#00001A] px-5 py-6 md:mb-0 md:max-w-[350px];
 }
 
 .latest-news__item:not(:last-child) {
@@ -68,11 +68,11 @@
 }
 
 .latest-news__title {
-  @apply mb-9 text-[32px] font-bold leading-[32px] text-[#E9AA52];
+  @apply mb-9 text-[32px] font-bold leading-[32px] text-[#E9AA52] md:mb-8 md:text-[40px] md:leading-[40px];
 }
 
 .latest-news__item-title {
-  @apply mb-2 text-[20px] font-extrabold leading-[24px] text-[#FFFDFA];
+  @apply mb-2 text-[20px] font-extrabold leading-[26px] text-[#FFFDFA];
 }
 
 .latest-news__item-description {

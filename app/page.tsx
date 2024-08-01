@@ -8,7 +8,7 @@ export default function Home() {
     <div className="mx-4 mb-20 mt-7 max-w-[1110px] md:mx-auto">
       <Header />
       <main className="main">
-        <div className="flex gap-x-[30px]">
+        <div className="md:flex md:gap-x-[30px] md:mb-[72px]">
           <Hero />
           <LatestNews />
         </div>
