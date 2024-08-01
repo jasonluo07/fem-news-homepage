@@ -12,7 +12,7 @@
 
 /* Header */
 .header {
-  @apply mb-8 flex justify-between md:mb-[55px];
+  @apply mb-8 flex justify-between md:mb-14;
 }
 
 .header__menu-toggle {
@@ -53,11 +53,11 @@
 }
 
 .hero__title {
-  @apply text-heading-l md:text-heading-xl mb-4 md:mb-0;
+  @apply text-heading-l md:text-heading-xl mb-4 line-clamp-3 md:mb-0;
 }
 
 .hero__text {
-  @apply text-body mb-6 text-gunmetal md:mb-7;
+  @apply text-body mb-6 line-clamp-4 text-gunmetal md:mb-7;
 }
 
 .hero__button {
@@ -79,11 +79,11 @@
 }
 
 .latest-news__item-title {
-  @apply text-heading-s mb-2 text-almost-white;
+  @apply text-heading-s mb-2 line-clamp-1 text-almost-white;
 }
 
 .latest-news__item-description {
-  @apply text-body text-silver;
+  @apply text-body line-clamp-2 text-silver;
 }
 
 /* FeaturedArticles */
@@ -108,5 +108,5 @@
 }
 
 .featured-articles__item-description {
-  @apply text-body text-gunmetal;
+  @apply text-body line-clamp-2 text-gunmetal;
 }

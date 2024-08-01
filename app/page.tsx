@@ -191,7 +191,7 @@ function FeaturedArticles() {
             height={127}
           />
           <div className="featured-articles__item-content">
-            <div className="articles-list__item-number">01</div>
+            <div className="articles-list__item-number">02</div>
             <h3 className="featured-articles__item-title">
               Top 10 Laptops of 2022
             </h3>
@@ -209,7 +209,7 @@ function FeaturedArticles() {
             height={127}
           />
           <div className="featured-articles__item-content">
-            <div className="articles-list__item-number">01</div>
+            <div className="articles-list__item-number">03</div>
             <h3 className="featured-articles__item-title">
               The Growth of Gaming
             </h3>
