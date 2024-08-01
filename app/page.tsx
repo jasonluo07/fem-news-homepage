@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
 function Header() {
   return (
     <header className="header">
-      <a className="header__logo" href="#">
+      <Link className="header__logo" href="#">
         <Image
           className="block md:hidden"
           src="/logo.svg"
@@ -33,7 +34,7 @@ function Header() {
           width={64}
           height={40}
         />
-      </a>
+      </Link>
       <button className="header__menu-toggle">
         <Image
           className="header__menu-icon"
@@ -46,29 +47,29 @@ function Header() {
       <nav className="header__nav">
         <ul className="header__nav-list">
           <li className="header__nav-item">
-            <a className="header__nav-link" href="#">
+            <Link className="header__nav-link" href="#">
               Home
-            </a>
+            </Link>
           </li>
           <li className="header__nav-item">
-            <a className="header__nav-link" href="#">
+            <Link className="header__nav-link" href="#">
               New
-            </a>
+            </Link>
           </li>
           <li className="header__nav-item">
-            <a className="header__nav-link" href="#">
+            <Link className="header__nav-link" href="#">
               Popular
-            </a>
+            </Link>
           </li>
           <li className="header__nav-item">
-            <a className="header__nav-link" href="#">
+            <Link className="header__nav-link" href="#">
               Trending
-            </a>
+            </Link>
           </li>
           <li className="header__nav-item">
-            <a className="header__nav-link" href="#">
+            <Link className="header__nav-link" href="#">
               Categories
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -109,9 +110,9 @@ function Hero() {
             power of the platforms back into the hands of the people. But is it
             really fulfilling its promise?
           </p>
-          <a className="hero__button" href="#">
+          <Link className="hero__button" href="#">
             READ MORE
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -125,9 +126,9 @@ function LatestNews() {
       <ul className="latest-news__list">
         <li className="latest-news__item">
           <h3 className="latest-news__item-title">
-            <a className="latest-news__item-link" href="#">
+            <Link className="latest-news__item-link" href="#">
               Hydrogen VS Electric Cars
-            </a>
+            </Link>
           </h3>
           <p className="latest-news__item-description">
             Will hydrogen-fueled cars ever catch up to EVs?
@@ -135,9 +136,9 @@ function LatestNews() {
         </li>
         <li className="latest-news__item">
           <h3 className="latest-news__item-title">
-            <a className="latest-news__item-link" href="#">
+            <Link className="latest-news__item-link" href="#">
               The Downsides of AI Artistry
-            </a>
+            </Link>
           </h3>
           <p className="latest-news__item-description">
             What are the possible adverse effects of on-demand AI image
@@ -146,9 +147,9 @@ function LatestNews() {
         </li>
         <li className="latest-news__item">
           <h3 className="latest-news__item-title">
-            <a className="latest-news__item-link" href="#">
+            <Link className="latest-news__item-link" href="#">
               Is VC Funding Drying Up?
-            </a>
+            </Link>
           </h3>
           <p className="latest-news__item-description">
             Private funding by VC firms is down 50% YOY. We take a look at what

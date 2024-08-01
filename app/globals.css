@@ -104,7 +104,7 @@
 }
 
 .featured-articles__item-title {
-  @apply text-heading-xs mb-2 text-dark-space-blue;
+  @apply text-heading-xs mb-2 line-clamp-1 text-dark-space-blue;
 }
 
 .featured-articles__item-description {
