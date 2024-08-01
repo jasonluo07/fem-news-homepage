@@ -80,11 +80,15 @@
 
 /* FeaturedArticles */
 .featured-articles__item:not(:last-child) {
-  @apply mb-8;
+  @apply mb-8 md:mb-0;
+}
+
+.featured-articles__list {
+  @apply md:flex md:gap-x-[30px];
 }
 
 .featured-articles__item {
-  @apply flex gap-x-6;
+  @apply flex gap-x-6 md:flex-1;
 }
 
 .articles-list__item-number {
