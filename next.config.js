@@ -4,4 +4,4 @@ const nextConfig = {
   basePath: '/fem-news-homepage',
 };
 
-export default nextConfig;
+module.exports = nextConfig;
