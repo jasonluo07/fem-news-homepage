@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.content-container {
+  @apply mx-4 mb-20 mt-7 max-w-[1110px] md:mx-auto md:mb-0;
+}
+
+.main-top {
+  @apply md:mb-[72px] md:flex md:gap-x-[30px];
+}
+
 /* Header */
 .header {
   @apply mb-8 flex justify-between md:mb-[55px];
