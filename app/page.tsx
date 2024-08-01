@@ -8,8 +8,10 @@ export default function Home() {
     <div className="mx-4 mb-20 mt-7 max-w-[1110px] md:mx-auto">
       <Header />
       <main className="main">
-        <Hero />
-        <LatestNews />
+        <div className="flex gap-x-[30px]">
+          <Hero />
+          <LatestNews />
+        </div>
         <FeaturedArticles />
       </main>
     </div>
