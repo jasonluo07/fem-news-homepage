@@ -176,7 +176,9 @@ function FeaturedArticles() {
           <div className="featured-articles__item-content">
             <div className="articles-list__item-number">01</div>
             <h3 className="featured-articles__item-title">
-              Reviving Retro PCs
+              <Link className="featured-articles__item-link" href="#">
+                Reviving Retro PCs
+              </Link>
             </h3>
             <p className="featured-articles__item-description">
               What happens when old PCs are given modern upgrades?
@@ -194,7 +196,9 @@ function FeaturedArticles() {
           <div className="featured-articles__item-content">
             <div className="articles-list__item-number">02</div>
             <h3 className="featured-articles__item-title">
-              Top 10 Laptops of 2022
+              <Link className="featured-articles__item-link" href="#">
+                Top 10 Laptops of 2022
+              </Link>
             </h3>
             <p className="featured-articles__item-description">
               Our best picks for various needs and budgets.
@@ -212,7 +216,9 @@ function FeaturedArticles() {
           <div className="featured-articles__item-content">
             <div className="articles-list__item-number">03</div>
             <h3 className="featured-articles__item-title">
-              The Growth of Gaming
+              <Link className="featured-articles__item-link" href="#">
+                The Growth of Gaming
+              </Link>
             </h3>
             <p className="featured-articles__item-description">
               How the pandemic has sparked fresh opportunities.
