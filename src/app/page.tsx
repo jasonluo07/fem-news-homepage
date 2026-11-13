@@ -89,10 +89,10 @@ function HeroImage() {
 
 export default function Home() {
   return (
-    // Desktop: the page is a min-100dvh column whose bottom space is a 24px
-    // floor plus a spacer that grows up to 56px, so a viewport that fits the
-    // content never scrolls just to reveal empty padding.
-    <div className="px-4 pt-7 pb-20 md:px-20 lg:flex lg:min-h-dvh lg:flex-col lg:px-10 lg:pt-22 lg:pb-6">
+    // Desktop: the content is centered vertically in a min-100dvh column, so
+    // the space above and below it is always equal (at least 40px), and a
+    // viewport that fits the content never scrolls.
+    <div className="px-4 pt-7 pb-20 md:px-20 lg:flex lg:min-h-dvh lg:flex-col lg:justify-center lg:p-10">
       {/* The 1112px Figma desktop container. */}
       <div className="mx-auto w-full max-w-278">
         <SiteHeader />
@@ -200,7 +200,6 @@ export default function Home() {
           </section>
         </main>
       </div>
-      <div aria-hidden="true" className="hidden lg:block lg:max-h-14 lg:grow" />
     </div>
   )
 }
