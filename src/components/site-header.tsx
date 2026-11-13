@@ -16,14 +16,14 @@ export function SiteHeader() {
         href="#"
         className="text-navy-950 hover:opacity-70 focus-visible:opacity-70"
       >
-        <Logo className="h-7 w-auto desktop:h-10" />
+        <Logo className="h-7 w-auto lg:h-10" />
         <span className="sr-only">W. news home</span>
       </a>
 
       {/* Desktop navigation; below the desktop breakpoint the same links
           live in the slide-in menu. */}
-      <nav aria-label="Primary" className="hidden desktop:block">
-        <ul className="flex items-center gap-500">
+      <nav aria-label="Primary" className="hidden lg:block">
+        <ul className="flex items-center gap-10">
           {NAV_LINKS.map((link) => (
             <li key={link.label}>
               <a

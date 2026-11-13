@@ -54,7 +54,8 @@ const HERO_ALT =
 
 // The desktop crop (730×300) already fits the 608px-wide tablet frame in
 // Figma, and from ~640px up the mobile crop (343×300) would be upscaled and
-// cut off top and bottom, so the switch happens before the tablet layout.
+// cut off top and bottom, so the switch happens before the tablet layout,
+// at Tailwind's default `sm` breakpoint.
 const HERO_DESKTOP_MEDIA = '(min-width: 40rem)'
 
 function HeroImage() {
@@ -80,7 +81,7 @@ function HeroImage() {
       <img
         {...mobileProps}
         alt={HERO_ALT}
-        className="h-[300px] w-full object-cover"
+        className="h-75 w-full object-cover"
       />
     </picture>
   )
@@ -91,110 +92,115 @@ export default function Home() {
     // Desktop: the page is a min-100dvh column whose bottom space is a 24px
     // floor plus a spacer that grows up to 56px, so a viewport that fits the
     // content never scrolls just to reveal empty padding.
-    <div className="mx-auto w-full max-w-[calc(1112px+2*2.5rem)] px-4 pt-7 pb-20 tablet:px-20 desktop:flex desktop:min-h-dvh desktop:flex-col desktop:px-500 desktop:pt-1100 desktop:pb-300">
-      <SiteHeader />
+    <div className="px-4 pt-7 pb-20 md:px-20 lg:flex lg:min-h-dvh lg:flex-col lg:px-10 lg:pt-22 lg:pb-6">
+      {/* The 1112px Figma desktop container. */}
+      <div className="mx-auto w-full max-w-278">
+        <SiteHeader />
 
-      <main className="mt-400 grid gap-800 desktop:mt-800 desktop:grid-cols-[minmax(0,730fr)_minmax(0,350fr)] desktop:gap-x-400">
-        <article aria-labelledby="hero-title" className="flex flex-col gap-300">
-          <HeroImage />
-          <div className="flex flex-col gap-300 desktop:grid desktop:grid-cols-2 desktop:gap-400">
-            <h1
-              id="hero-title"
-              className="text-preset-2 text-navy-950 desktop:text-preset-1"
-            >
-              The Bright Future of Web 3.0?
-            </h1>
-            <div className="flex flex-col items-start gap-300 desktop:gap-400">
-              <p>
-                We dive into the next evolution of the web that claims to put
-                the power of the platforms back into the hands of the people.
-                But is it really fulfilling its promise?
-              </p>
-              <a
-                href="#"
-                className="inline-flex h-12 min-w-[185px] items-center justify-center bg-red-500 px-400 text-preset-7 text-navy-950 uppercase hover:bg-navy-950 hover:text-white focus-visible:bg-navy-950 focus-visible:text-white"
-              >
-                {/* Negative margin cancels the tracking after the last letter
-                    so the label is optically centered (Figma: 33px each side). */}
-                <span className="-mr-[0.27375rem]">Read more</span>
-                <span className="sr-only">: The Bright Future of Web 3.0?</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <section
-          aria-labelledby="new-heading"
-          className="bg-navy-950 px-[20.5px] py-[21.5px] tablet:px-[41.7px] tablet:py-400 desktop:flex desktop:flex-col desktop:justify-center desktop:px-300 desktop:py-[32.5px]"
-        >
-          <h2
-            id="new-heading"
-            className="text-preset-3 text-gold-400 tablet:text-[2.5rem]/10 desktop:text-preset-3"
+        <main className="mt-8 grid gap-16 lg:mt-16 lg:grid-cols-3 lg:gap-x-8">
+          <article
+            aria-labelledby="hero-title"
+            className="flex flex-col gap-6 lg:col-span-2"
           >
-            New
-          </h2>
-          <ul className="mt-400 flex flex-col gap-400">
-            {NEW_ARTICLES.map((article) => (
-              <li
-                key={article.title}
-                className="flex flex-col gap-100 border-navy-600 not-first:border-t not-first:pt-400"
+            <HeroImage />
+            <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:gap-8">
+              <h1
+                id="hero-title"
+                className="text-preset-2 text-navy-950 lg:text-preset-1"
               >
-                <h3 className="text-preset-4 text-white">
-                  <a
-                    href="#"
-                    className="hover:text-gold-400 focus-visible:text-gold-400 focus-visible:outline-gold-400"
-                  >
-                    {article.title}
-                  </a>
-                </h3>
-                <p className="text-grey-300">{article.summary}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section aria-labelledby="top-heading" className="desktop:col-span-2">
-          <h2 id="top-heading" className="sr-only">
-            Top articles
-          </h2>
-          <ol className="flex flex-col gap-400 desktop:grid desktop:grid-cols-3">
-            {TOP_ARTICLES.map((article, index) => (
-              <li key={article.title} className="flex items-center gap-300">
-                <div className="relative min-h-[127px] w-[100px] shrink-0 self-stretch desktop:min-h-[129px]">
-                  <Image
-                    src={article.image}
-                    alt={article.alt}
-                    fill
-                    sizes="100px"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="flex min-w-0 flex-1 flex-col gap-100">
-                  <span
-                    aria-hidden="true"
-                    className="text-preset-3 text-red-500"
-                  >
-                    {String(index + 1).padStart(2, '0')}
+                The Bright Future of Web 3.0?
+              </h1>
+              <div className="flex flex-col items-start gap-6 lg:gap-8">
+                <p>
+                  We dive into the next evolution of the web that claims to put
+                  the power of the platforms back into the hands of the people.
+                  But is it really fulfilling its promise?
+                </p>
+                <a
+                  href="#"
+                  className="inline-flex h-12 min-w-46 items-center justify-center bg-red-500 px-8 text-preset-7 text-navy-950 uppercase hover:bg-navy-950 hover:text-white focus-visible:bg-navy-950 focus-visible:text-white"
+                >
+                  {/* Negative margin cancels the tracking after the last letter
+                    so the label is optically centered (Figma: 33px each side). */}
+                  <span className="-mr-1">Read more</span>
+                  <span className="sr-only">
+                    : The Bright Future of Web 3.0?
                   </span>
-                  <h3 className="text-preset-5 text-navy-950">
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <section
+            aria-labelledby="new-heading"
+            className="bg-navy-950 p-5 md:px-11 md:py-8 lg:flex lg:flex-col lg:justify-center lg:px-6"
+          >
+            <h2
+              id="new-heading"
+              className="text-preset-3 text-gold-400 md:text-preset-2 md:font-bold lg:text-preset-3"
+            >
+              New
+            </h2>
+            <ul className="mt-8 flex flex-col gap-8">
+              {NEW_ARTICLES.map((article) => (
+                <li
+                  key={article.title}
+                  className="flex flex-col gap-2 border-navy-600 not-first:border-t not-first:pt-8"
+                >
+                  <h3 className="text-preset-4 text-white">
                     <a
                       href="#"
-                      className="hover:text-red-500 focus-visible:text-red-500"
+                      className="hover:text-gold-400 focus-visible:text-gold-400 focus-visible:outline-gold-400"
                     >
                       {article.title}
                     </a>
                   </h3>
-                  <p>{article.summary}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </section>
-      </main>
-      <div
-        aria-hidden="true"
-        className="hidden desktop:block desktop:max-h-14 desktop:grow"
-      />
+                  <p className="text-grey-300">{article.summary}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section aria-labelledby="top-heading" className="lg:col-span-3">
+            <h2 id="top-heading" className="sr-only">
+              Top articles
+            </h2>
+            <ol className="flex flex-col gap-8 lg:grid lg:grid-cols-3">
+              {TOP_ARTICLES.map((article, index) => (
+                <li key={article.title} className="flex items-center gap-6">
+                  <div className="relative min-h-32 w-25 shrink-0 self-stretch">
+                    <Image
+                      src={article.image}
+                      alt={article.alt}
+                      fill
+                      sizes="100px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="flex min-w-0 flex-1 flex-col gap-2">
+                    <span
+                      aria-hidden="true"
+                      className="text-preset-3 text-red-500"
+                    >
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <h3 className="text-preset-5 text-navy-950">
+                      <a
+                        href="#"
+                        className="hover:text-red-500 focus-visible:text-red-500"
+                      >
+                        {article.title}
+                      </a>
+                    </h3>
+                    <p>{article.summary}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        </main>
+      </div>
+      <div aria-hidden="true" className="hidden lg:block lg:max-h-14 lg:grow" />
     </div>
   )
 }

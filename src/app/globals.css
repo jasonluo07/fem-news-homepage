@@ -1,9 +1,16 @@
 @import 'tailwindcss';
 
 /*
- * Design tokens from the Figma "Design System" page.
- * Names follow Figma: colors (White, Black, Grey 300/200, Navy 950/600,
- * Gold 400, Red 500), Text Preset 1–7 and the spacing scale.
+ * Design tokens from the Figma "Design System" page. Only the brand-specific
+ * ones live here: colors (White, Black, Grey 300/200, Navy 950/600, Gold 400,
+ * Red 500) and Text Preset 1–7, named as in Figma.
+ *
+ * Layout uses Tailwind's defaults instead of custom tokens:
+ * - Spacing: Figma's spacing-100 … spacing-1100 (8–88px) are all multiples
+ *   of Tailwind's 4px step (spacing-100 = 2, spacing-400 = 8,
+ *   spacing-1100 = 22).
+ * - Breakpoints: the Figma Tablet (768px) and the two-column desktop layout
+ *   (from 1024px) are Tailwind's `md` and `lg`.
  */
 @theme {
   /* Only the design-system palette; drop Tailwind's default colors. */
@@ -16,21 +23,6 @@
   --color-navy-600: #5e607a;
   --color-gold-400: #e9aa52;
   --color-red-500: #f15d51;
-
-  /* Figma frames: Mobile 375, Tablet 768, Desktop 1440. */
-  --breakpoint-*: initial;
-  --breakpoint-tablet: 48rem; /* 768px */
-  /* 1024px: the two-column layout already fits here (main 616px + sidebar
-     296px at a 40px gutter), so the tablet stack is not stretched further. */
-  --breakpoint-desktop: 64rem;
-
-  /* Spacing scale (spacing-100 = 8px … spacing-1100 = 88px). */
-  --spacing-100: 0.5rem;
-  --spacing-300: 1.5rem;
-  --spacing-400: 2rem;
-  --spacing-500: 2.5rem;
-  --spacing-800: 4rem;
-  --spacing-1100: 5.5rem;
 
   /* Text Preset 1 – Inter Extra Bold 56/56 */
   --text-preset-1: 3.5rem;

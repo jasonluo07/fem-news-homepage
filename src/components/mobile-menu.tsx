@@ -6,7 +6,7 @@ import { IconClose, IconMenu } from './icons'
 type NavLink = { readonly label: string; readonly href: string }
 
 const MENU_ID = 'mobile-menu'
-// Must match --breakpoint-desktop in globals.css.
+// Tailwind's default `lg` breakpoint, where the desktop nav takes over.
 const DESKTOP_QUERY = '(min-width: 64rem)'
 
 /**
@@ -102,7 +102,7 @@ export function MobileMenu({ links }: { links: readonly NavLink[] }) {
         onClick={openMenu}
         // Negative margin keeps the 40×17 icon in its Figma position while
         // the padding gives a 64×41 touch target.
-        className="-m-3 p-3 text-navy-950 hover:text-red-500 focus-visible:text-red-500 desktop:hidden"
+        className="-m-3 p-3 text-navy-950 hover:text-red-500 focus-visible:text-red-500 lg:hidden"
       >
         <IconMenu className="block" />
       </button>
@@ -114,9 +114,9 @@ export function MobileMenu({ links }: { links: readonly NavLink[] }) {
         onClose={handleClose}
         onClick={handleClick}
         onKeyDown={handleKeyDown}
-        className="fixed inset-y-0 right-0 left-auto m-0 h-dvh max-h-none w-64 max-w-full overflow-y-auto border-0 bg-white p-0 backdrop:bg-navy-950/50 tablet:w-78 desktop:hidden"
+        className="fixed inset-y-0 right-0 left-auto m-0 h-dvh max-h-none w-64 max-w-full overflow-y-auto border-0 bg-white p-0 backdrop:bg-navy-950/50 md:w-78 lg:hidden"
       >
-        <div className="flex min-h-full flex-col items-end gap-1100 pt-[27px] pr-[21px] pb-[27px] pl-[21px] tablet:pr-20 tablet:pl-[36px]">
+        <div className="flex min-h-full flex-col items-end gap-22 px-5 py-7 md:pr-20 md:pl-9">
           <button
             type="button"
             aria-label="Close menu"
@@ -126,13 +126,13 @@ export function MobileMenu({ links }: { links: readonly NavLink[] }) {
             <IconClose className="block" />
           </button>
           <nav aria-label="Primary" className="w-full">
-            <ul className="flex flex-col gap-300">
+            <ul className="flex flex-col gap-6">
               {links.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
                     onClick={closeMenu}
-                    className="block text-[1.125rem] leading-6 text-navy-950 hover:text-red-500 focus-visible:text-red-500"
+                    className="block text-lg/6 text-navy-950 hover:text-red-500 focus-visible:text-red-500"
                   >
                     {link.label}
                   </a>
