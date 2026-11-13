@@ -88,7 +88,10 @@ function HeroImage() {
 
 export default function Home() {
   return (
-    <div className="mx-auto w-full max-w-[calc(1112px+2*2.5rem)] px-4 pt-7 pb-20 tablet:px-20 desktop:px-500 desktop:pt-1100">
+    // Desktop: the page is a min-100dvh column whose bottom space is a 24px
+    // floor plus a spacer that grows up to 56px, so a viewport that fits the
+    // content never scrolls just to reveal empty padding.
+    <div className="mx-auto w-full max-w-[calc(1112px+2*2.5rem)] px-4 pt-7 pb-20 tablet:px-20 desktop:flex desktop:min-h-dvh desktop:flex-col desktop:px-500 desktop:pt-1100 desktop:pb-300">
       <SiteHeader />
 
       <main className="mt-400 grid gap-800 desktop:mt-800 desktop:grid-cols-[minmax(0,730fr)_minmax(0,350fr)] desktop:gap-x-400">
@@ -188,6 +191,10 @@ export default function Home() {
           </ol>
         </section>
       </main>
+      <div
+        aria-hidden="true"
+        className="hidden desktop:block desktop:max-h-14 desktop:grow"
+      />
     </div>
   )
 }
